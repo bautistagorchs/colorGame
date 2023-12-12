@@ -1,7 +1,15 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.content-container {
+  margin-top: 10vh;
+}
+
 #h1 {
   text-align: center;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 3px;
 }
 
 .square {
@@ -16,42 +24,91 @@
 }
 
 .container {
-  max-width: 600px;
+  max-width: 45%;
 }
-
 #stripe {
-  background-color: white;
-  height: 30px;
+  height: 5vh;
+  margin: 1.2% 28%;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 8px;
+  background-color: rgba(80, 226, 195, 0.158);
 }
 
 .selected {
-  background-color: tomato;
+  animation: rotate 1.5s linear 0s infinite;
+  box-shadow: 0px 0px 19px -11px #fff;
+}
+
+@keyframes bounce {
+  20%,
+  60%,
+  90%,
+  to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+  90% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes rotate {
+  20%,
+  60%,
+  100%,
+  to {
+    transform: rotate(-6deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  40% {
+    transform: rotate(11deg);
+  }
+  80% {
+    transform: rotate(8deg);
+  }
+  0% {
+    transform: rotate(-4deg);
+  }
 }
 
 button {
   background-color: inherit;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: white;
   font-weight: 700;
   height: 100%;
+  padding: 0px 15px;
+  background-color: rgba(109, 51, 51, 0);
   outline: none;
   border: none;
-  transition: all 0.4s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-radius: 13px;
+  transition: all 0.8s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
 }
 
 button:hover {
   color: white;
-  background: yellowgreen;
+  box-shadow: 0px 0px 19px 2px #000;
+  transform: translateY(-10px);
+  animation-play-state: paused;
 }
 
 #message {
   display: inline-block;
-  width: 15%;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: black;
+  width: 40%;
+  max-width: 40%;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #fff;
+  transform: rotate(0deg);
+  transition: all 0.8s ease;
 }
